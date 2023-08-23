@@ -1,0 +1,27 @@
+/* font import link  */
+@import url('https://fonts.googleapis.com/css2?family=Barriecito&display=swap');
+
+.wrap {
+    position: relative;
+}
+
+.course {
+    background-color: rgb(227, 235, 242);
+    font-family: 'Barriecito', cursive;
+    color: rgb(211, 48, 216);
+    margin-left: 10px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.course-image {
+    width: 240px;
+}
+
+.btn {
+    position: relative;
+    left: 50%;
+    bottom: 100%;
+    border: 1px solid rgb(239, 47, 47);
+}
