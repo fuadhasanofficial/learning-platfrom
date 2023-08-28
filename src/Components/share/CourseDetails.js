@@ -9,7 +9,7 @@ const CourseDetails = () => {
     const fullDetails = details.details;
     const shortDetails = fullDetails.slice(0, 500)
     const [courseDetails, setcourseDetails] = useState(shortDetails);
-    const [seeMorebutton, setButton] = useState(false)
+    const [seeMorebutton, setButton] = useState(true)
     const handleSeeMore = () => {
         setButton(!seeMorebutton);
         if (seeMorebutton) {

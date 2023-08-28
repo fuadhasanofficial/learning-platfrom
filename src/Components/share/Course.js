@@ -25,7 +25,7 @@ const Course = ({ course }) => {
                 </div>
             </div>
             <div className='btn-wrap position-absolute bottom-0 start-50 translate-middle-x'>
-                <Link to={`/course/${course._id}`} className=' btn btn-info '>See more</Link>
+                <Link to={`/course/${course._id}`} className=' btn btn-info '>Get premium access</Link>
             </div>
 
 

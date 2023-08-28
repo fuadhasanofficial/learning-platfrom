@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Container, Nav, NavDropdown, Navbar } from 'react-bootstrap';
 import logo from '../../src/images/skills-icon-logo-illustration-skills-symbol-template-for-graphic-and-web-design-collection-free-vector.jpg'
+import { Link } from 'react-router-dom';
+import { AuthProviderContext } from '../routes/Context/AuthContext';
 
 
 const Header = () => {
+    const { user, logOut } = useContext(AuthProviderContext)
     return (
         <div>
             <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
                 <Container>
-                    <Navbar.Brand href="#home"> <img className='img-fluid' src={logo} style={{ width: '40px' }} alt='This is your skill logo' /> Your Skill .Com</Navbar.Brand>
+                    <Navbar.Brand href="http://localhost:3000/"> <img className='img-fluid' src={logo} style={{ width: '40px' }} alt='This is your skill logo' /> Your Skill .Com</Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
@@ -27,10 +30,17 @@ const Header = () => {
                             </NavDropdown>
                         </Nav>
                         <Nav>
-                            <Nav.Link href="#deets">More deets</Nav.Link>
-                            <Nav.Link eventKey={2} href="#memes">
-                                Dank memes
-                            </Nav.Link>
+                            <div className=''>
+                                <div >
+                                    {user?.uid ? <Link onClick={logOut}>logOut</Link> : <Link to='/login'>Login</Link>}
+                                </div>
+
+                                <div>
+                                    <Link to='/profile'>
+                                        <img className='rounded-circle' style={{ width: '50px' }} rounded src={user?.photoURL} alt="" />
+                                    </Link>
+                                </div>
+                            </div>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
