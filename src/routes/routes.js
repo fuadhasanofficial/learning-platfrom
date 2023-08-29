@@ -10,12 +10,12 @@ import Profile from "../Components/Profile/Profile";
 export const router = createBrowserRouter([
     {
         path: '/', element: <Main></Main>, children: [
-            { path: '/', element: <Home></Home>, loader: () => fetch('http://localhost:5000/courses') },
+            { path: '/', element: <Home></Home>, loader: () => fetch('https://learning-server-seven-snowy.vercel.app/courses') },
             {
                 path: '/course/:id',
                 element: <PrivateRoute><CourseDetails></CourseDetails></PrivateRoute>,
                 loader: ({ params }) => {
-                    return fetch(`http://localhost:5000/course/${params.id}`)
+                    return fetch(`https://learning-server-seven-snowy.vercel.app/course/${params.id}`)
                 }
             },
             { path: '/login', element: <Login></Login> },

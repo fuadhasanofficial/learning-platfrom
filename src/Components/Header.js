@@ -11,7 +11,7 @@ const Header = () => {
         <div>
             <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
                 <Container>
-                    <Navbar.Brand href="http://localhost:3000/"> <img className='img-fluid' src={logo} style={{ width: '40px' }} alt='This is your skill logo' /> Your Skill .Com</Navbar.Brand>
+                    <Navbar.Brand href="https://your-skill.web.app/"> <img className='img-fluid' src={logo} style={{ width: '40px' }} alt='This is your skill logo' /> Your Skill .Com</Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
